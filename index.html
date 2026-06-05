@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohameed Idris M </title>
-
+  <link rel="icon" type="image/png" href="favicon.png" />
   <!-- React + Babel -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -167,10 +167,23 @@
     }
 
     .logo{
-      font-size:1.4rem;
-      font-weight:800;
-      letter-spacing:1px;
-    }
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:1.4rem;
+  font-weight:800;
+  letter-spacing:1px;
+}
+.logo img{
+  width:70px;
+  height:70px;
+}
+.logo-img{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  object-fit:cover;
+}
 
     .logo span{
       color:var(--accent);
@@ -222,13 +235,19 @@
       align-items:center;
       position:relative;
     }
+    .hero-image img{
+  width:80%;
+  max-width:450px;
+  margin:auto;
+  display:block;
+}
 
-    .hero-grid{
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:60px;
-      align-items:center;
-    }
+   .hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
 
     .hero-text h3{
       color:var(--accent);
@@ -316,11 +335,11 @@
       position:relative;
     }
 
-    .hero-card{
-      padding:35px;
-      position:relative;
-      overflow:hidden;
-    }
+   .hero-card{
+  padding:20px;
+  max-width:500px;
+  margin:auto;
+}
 
     .hero-card::before{
       content:'';
@@ -335,9 +354,12 @@
     }
 
     .hero-visual img{
-      width:100%;
-      border-radius:20px;
-    }
+  width:90%;
+  max-width:400px;
+  border-radius:20px;
+  display:block;
+  margin:auto;
+}
 
     .icon-grid{
       display:grid;
@@ -934,7 +956,15 @@ function App(){
     <>
       <nav>
         <div className="container nav-inner">
-          <div className="logo">Mohameed<span> IDRIS</span></div>
+          <div className="logo">
+  <img
+    src="logo.png"
+    alt="MI Logo"
+    className="logo-img"
+  />
+  
+  <span>MOHAMEED IDRIS</span>
+</div>
 
           <div className={`nav-links ${menu ? "active":""}`}>
             <a href="#home">Home</a>
@@ -963,10 +993,12 @@ function App(){
         <div className="container hero-grid">
 
           <div className="hero-text reveal">
-            <h3>QA/Test Engineer • API AUTOMATION </h3>
+            <h3>QA/Test Engineer • API Testing & Automation </h3>
 
             <h1>
-              Mohameed <span>IDRIS M</span>
+              MOHAMEED 
+              <br />
+              <span>IDRIS M</span>
             </h1>
 
             <div className="typing">
@@ -992,29 +1024,9 @@ REST APIs, and Backend Development.
           <div className="hero-visual reveal">
             <div className="glass hero-card">
 
-              <img src="https://uploads.onecompiler.io/44qw4wvt8/44qw4wdem/WhatsApp%20Image%202026-05-27%20at%209.10.07%20PM.jpeg" />
+              <img src="d:\Downloads\image.jpeg" />
 
-              <div className="icon-grid">
-                <div className="icon-box">
-                  <i className="fa-solid fa-network-wired"></i>
-                  <h4>API Testing</h4>
-                </div>
-
-                <div className="icon-box">
-                  <i className="fa-solid fa-shield-halved"></i>
-                  <h4>Problem Solving</h4>
-                </div>
-
-                <div className="icon-box">
-                  <i className="fa-solid fa-server"></i>
-                  <h4>Backend Systems</h4>
-                </div>
-
-                <div className="icon-box">
-                  <i className="fa-solid fa-robot"></i>
-                  <h4>Automation</h4>
-                </div>
-              </div>
+              
 
             </div>
           </div>
